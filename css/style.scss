@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap");
+
+$bodyFont: "Open Sans", sans-serif;
+$headingsFont: "Caveat", cursive;
+$font: 16px;
+$white: #fff;
+$orange: orangered;
+$lightGray: #eee;
+$gray: #444;
+$padding: 70px 0;
+$transition: 0.4s ease;
+$borderRadius: 10px;
+$boxShadow: 0 0 20px #999;
+
+@mixin btn {
+  padding: 15px 30px;
+  background: $orange;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+    background: $gray;
+    color: $white;
+    transition: $transition;
+  }
+}
+
+@mixin backgroundImages {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+}
+
+body {
+  font-family: $bodyFont;
+  background: $lightGray;
+  color: $gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingsFont;
+}
+
+.underline {
+  display: block;
+  content: "";
+  width: 200px;
+  height: 2px;
+  background: $orange;
+  margin: 30px auto 0 auto;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/************
+header
+************/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/header.jpg);
+  height: 100vh;
+  @include backgroundImages;
+
+  p {
+    font-size: 2rem;
+    font-weight: 300;
+
+    &::after {
+      @extend .underline;
+    }
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+/************
+introduction
+************/
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  padding: $padding;
+  text-align: center;
+
+  article {
+    flex: 0 0 48%;
+
+    img {
+      width: 100%;
+    }
+
+    .text {
+      background: $white;
+      padding: 40px;
+      position: relative;
+      top: -15px;
+
+      h4 {
+        margin: 20px, 0;
+        font-size: 1.2rem;
+        font-family: $bodyFont;
+        font-weight: 300;
+
+        &::after {
+          @extend .underline;
+          width: 77px;
+        }
+      }
+
+      h2 {
+        margin: 20px, 0;
+        font-size: 2.5rem;
+      }
+
+      button {
+        @include btn;
+      }
+    }
+  }
+}
+
+/************
+cta
+************/
+.cta {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/cta.jpg);
+  height: 60vh;
+  @include backgroundImages;
+
+  h4 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-family: $bodyFont;
+
+    &::after {
+      @extend .underline;
+    }
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+}
+
+/************
+galery
+************/
+.galery {
+  padding: $padding;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  article {
+    flex: 0 0 48%;
+    margin-bottom: 60px;
+
+    img {
+      width: 100%;
+      border: 15px solid $white;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 0.7s;
+        border: 15px solid $orange;
+      }
+    }
+  }
+}
+
+/************
+footer
+************/
+footer {
+  height: 150px;
+  background: $gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  a {
+    color: $orange;
+    font-size: 2rem;
+    padding: 15px;
+
+    &:hover {
+      cursor: pointer;
+      background: $gray;
+      color: $white;
+      transition: $transition;
+    }
+  }
+
+  p {
+    color: $white;
+  }
+}

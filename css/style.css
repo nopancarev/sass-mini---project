@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #eee;
+  color: #444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Caveat", cursive;
+}
+
+.underline, header p::after, .introduction article .text h4::after, .cta h4::after {
+  display: block;
+  content: "";
+  width: 200px;
+  height: 2px;
+  background: orangered;
+  margin: 30px auto 0 auto;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/************
+header
+************/
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/header.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+header p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+header h1 {
+  font-size: 7rem;
+}
+
+/************
+introduction
+************/
+.introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.introduction article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+}
+
+.introduction article img {
+  width: 100%;
+}
+
+.introduction article .text {
+  background: #fff;
+  padding: 40px;
+  position: relative;
+  top: -15px;
+}
+
+.introduction article .text h4 {
+  margin: 20px, 0;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.introduction article .text h4::after {
+  width: 77px;
+}
+
+.introduction article .text h2 {
+  margin: 20px, 0;
+  font-size: 2.5rem;
+}
+
+.introduction article .text button {
+  padding: 15px 30px;
+  background: orangered;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  border: none;
+  text-transform: uppercase;
+}
+
+.introduction article .text button:hover {
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+/************
+cta
+************/
+.cta {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/cta.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cta.jpg);
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.cta h4 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+
+.cta h2 {
+  font-size: 6rem;
+}
+
+/************
+galery
+************/
+.galery {
+  padding: 70px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.galery article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+  margin-bottom: 60px;
+}
+
+.galery article img {
+  width: 100%;
+  border: 15px solid #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px #999;
+          box-shadow: 0 0 20px #999;
+}
+
+.galery article img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  border: 15px solid orangered;
+}
+
+/************
+footer
+************/
+footer {
+  height: 150px;
+  background: #444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+footer a {
+  color: orangered;
+  font-size: 2rem;
+  padding: 15px;
+}
+
+footer a:hover {
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+footer p {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
